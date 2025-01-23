@@ -1,0 +1,39 @@
+
+
+.Head {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    background-color: #73A641; /* Set background color for the Head */
+    padding: 1rem; /* Optional: Add padding for better appearance */
+}
+
+.flex-list {
+    display: flex;
+    list-style-type: none; /* Remove bullets */
+    color: white; /* Text color */
+    margin-right: 10%; /* Add margin to the right to create space */
+}
+
+.flex-list li {
+    margin-right: 15px; /* Add space between items */
+}
+
+.flex-list li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+
+.icon {
+    width: 20px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 5px; /* Space between the icon and text */
+}
+
+@media (max-width: 768px) {
+    .flex-list {
+        flex-direction: column; /* Stack items on top of each other */
+        align-items: center; /* Center items horizontally */
+        justify-content: center;
+        text-align: center; /* Center text within each item */
+        width: 100%;
+    }
+}
