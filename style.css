@@ -4,7 +4,7 @@
     display: flex;
     justify-content: flex-end; /* Align items to the right */
     background-color: #73A641; /* Set background color for the Head */
-    padding: 1rem; /* Optional: Add padding for better appearance */
+    padding-top: 1rem; /* Optional: Add padding for better appearance */
 }
 
 .flex-list {
