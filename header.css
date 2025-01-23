@@ -1,0 +1,70 @@
+.header {
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.logo {
+    margin-right: auto; /* Push the nav to the right */
+}
+
+.logo img {
+    width: 400px; /* Resized logo */
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.nav {
+    margin-left: 20px; /* Optional: Adjust margin for the nav container */
+    margin-right: 10%;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none; /* Remove bullets */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+}
+
+.nav-list li {
+    margin-right: 40px; /* Space between items */
+    color: #416950; /* Change text color to grey */
+    justify-content: space-between;
+    font-weight: bold; /* Make text bold */
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-list li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text within each item */
+    }
+
+    .logo {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .nav {
+        margin-left: 0; /* Remove left margin on smaller screens */
+        margin-top: 10px; /* Optional: Add some space between logo and nav */
+    }
+
+    .nav-list {
+        flex-direction: column; /* Stack nav items vertically */
+        width: 100%; /* Optional: Make nav list take full width */
+        align-items: center; /* Center nav items */
+    }
+
+    .nav-list li {
+        margin-right: 0; /* Remove right margin for vertical layout */
+        margin-bottom: 10px; /* Space between items */
+    }
+}
