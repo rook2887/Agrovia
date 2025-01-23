@@ -63,14 +63,28 @@ width: 100%;}
             height: 100%; /* Set the height of carousel images to full size */
             object-fit: cover; /* Ensure the image covers the area without distortion */
         }
+
+        h1.agriculture-fix {
+            font-size: 0.5rem; /* Adjust the font size for this specific title */
+        }
+
         .carousel-caption {
             display: block !important; /* Force captions to be displayed */
             opacity: 1 !important; /* Ensure captions are fully visible */
             visibility: visible !important; /* Ensure captions are visible */
+            top: 20%; /* Center vertically */
         }
+
+
+
         .carousel-caption h1.agrovia-fix {
             font-size: 6rem;
         }
+
+        .carousel-caption h1.agriculture-fix {
+            font-size: 3rem !important; /* Force the font size to be smaller */
+        }
+
     }
 
     </style>
@@ -131,7 +145,7 @@ width: 100%;}
             <div class="carousel-item" style="height: 100%;">
                 <img class="d-block w-100" src="./images/Car5.png" alt="Fifth slide" class="carousel-image">
                 <div class="carousel-caption d-none d-md-block">
-                    <h1 class="medium-text">Choose Agrovia Agriculture for unmatched quality</h1>
+                    <h1 class="medium-text agriculture-fix" style="font-size: 1.5rem;">Choose Agrovia Agriculture for unmatched quality</h1>
                     <p>Description for the fifth slide.</p>
                 </div>
             </div>
