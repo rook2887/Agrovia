@@ -118,6 +118,34 @@ width: 100%;}
         }
     }
 
+    .nav-list li {
+        color: #808080; /* Gray color for non-active items */
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: normal;
+    }
+
+    .nav-list li:hover {
+        color: #2D473f; /* Darker color on hover */
+        font-weight: bold;
+    }
+
+    /* Active state for home page */
+    .nav-list li:first-child {
+        color: #2D473f; /* Darker color for active page */
+        font-weight: bold;
+    }
+
+    /* Make About Us clickable */
+    .nav-list li:nth-child(2) {
+        cursor: pointer;
+    }
+
+    .nav-list li:nth-child(2):hover {
+        color: #2D473f;
+        font-weight: bold;
+    }
+    
     .about-us-section {
         background-image: url('./images/Strawberryaboutus.png'); /* Update with the correct path */
         background-size: cover;
@@ -384,7 +412,7 @@ width: 100%;}
         <nav class="nav">
             <ul class="flex-list nav-list">
                 <li>Home</li>
-                <li>About Us</li>
+                <li><a href="aboutus.html" style="text-decoration: none; color: inherit;">About Us</a></li>
                 <li>Our Products</li>
                 <li>Gallery</li>
                 <li>Contact Us</li>
@@ -700,12 +728,7 @@ width: 100%;}
               transform: scale(1.1); /* Slightly enlarge on hover */
             }
             
-            /* Responsive Design */
-            @media (max-width: 768px) {
-              .back-to-top-button {
-                bottom: 110px; /* Adjusted for smaller screens */
-              }
-            }
+            
 /* WhatsApp Button */
 .whatsapp-button {
   width: 70px; /* Increased size */
@@ -723,6 +746,14 @@ width: 100%;}
   height: 70px; /* Increased size */
   font-size: 48px; /* Increased arrow size */
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+              .back-to-top-button {
+                bottom: 100px !important; /* Adjusted for smaller screens */
+              }
+            }
+
               .endicon {
         text-align: left; /* Align text to the left */
     }
