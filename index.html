@@ -232,6 +232,66 @@ width: 100%;}
         }
     }
 
+    .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 20px; /* Space between the panels */
+        align-items: center; /* Center items vertically */
+        padding: 20px; /* Add padding around the grid */
+    }
+
+    .video-panel {
+        display: flex;
+        justify-content: center; /* Center the video */
+        align-items: center; /* Center the video vertically */
+        width: 100%; /* Ensure the panel takes full width */
+    }
+
+    .video-container {
+        width: 100%; /* Full width for the container */
+        max-width: 800px; /* Set a maximum width for the video */
+        height: 100%; /* Ensure the container takes full height */
+        aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
+        overflow: hidden; /* Hide overflow */
+    }
+
+    .video-container video {
+        width: 100%; /* Make video responsive */
+        height: 100%; /* Fill the container */
+        object-fit: cover; /* Cover the area while maintaining aspect ratio */
+    }
+
+    .info-panel {
+        text-align: left; /* Align text to the left */
+    }
+
+    .info-panel h3 {
+        margin-bottom: 10px; /* Space below the title */
+    }
+
+    .info-panel ul {
+        list-style: none; /* Remove default list styling */
+        padding: 0; /* Remove padding */
+    }
+
+    .info-panel li {
+        margin-bottom: 10px; /* Space between list items */
+        display: flex; /* Use flexbox for alignment */
+        align-items: center; /* Center items vertically */
+    }
+
+    .info-panel img {
+        margin-right: 10px; /* Space between image and text */
+        width: 20px; /* Set a width for the checkmark image */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    @media (max-width: 768px) {
+        .info-grid {
+            grid-template-columns: 1fr; /* Stack panels on smaller screens */
+        }
+    }
+
     </style>
 </head>
 <body>
@@ -369,6 +429,27 @@ width: 100%;}
 <section>
     <h3 style="text-align: center; color: #2D473f; font-style: italic;" class="unique-section-title">Product on fire</h3>
     <p style="text-align: center;" class="unique-section-paragraph">Whether you're looking to enhance your product line or satisfy customer cravings, our premium strawberries are the ideal choice. Let's elevate your offerings with the best of Egypt!</p>
+</section>
+<section class="info-grid">
+    <div class="video-panel">
+        <div class="video-container">
+            <video controls poster="./aiorange.jpg">
+                <source src="./Fruit video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <div class="info-panel">
+        <h2 style= "color: #6a8e4d; font-size: 3rem;" class="unique-section-title">FRESH STRAWBERRY</h2>
+        <p style="font-size: 1.5rem;">Discover the availability of our exceptional strawberries</p>
+        <ul>
+            <li><img src="./images/checkmark.png" alt="Checkmark"> Available in several grades to meet your requirements</li>
+            <li><img src="./images/checkmark.png" alt="Checkmark"> Offered in different sizes to suit your needs</li>
+            <li><img src="./images/checkmark.png" alt="Checkmark"> Comes in various shapes for diverse applications</li>
+            <li><img src="./images/checkmark.png" alt="Checkmark"> Available in many packaging options for convenience in use</li>
+            <li><img src="./images/checkmark.png" alt="Checkmark"> Comes in many standards to comply with your country's regulations</li>
+        </ul>
+    </div>
 </section>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
