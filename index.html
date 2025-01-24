@@ -325,9 +325,11 @@ width: 100%;}
 }
 
     @media (max-width: 768px) {
-        .product-grid {
+        .product-grid . {
             grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
         }
+
+      
 
         .learn-more img {
             max-width: 50%;
@@ -338,6 +340,8 @@ width: 100%;}
         .product-grid {
             grid-template-columns: 1fr; /* 1 column on very small screens */
         }
+
+    
     }
 
     .core-value-img {
@@ -563,7 +567,29 @@ width: 100%;}
         </div>
     </div>
     <!-- End of statistics section -->
-     
+     <section class="beforeendgrid">
+            <div style="display: grid; grid-template-columns: repeat(4, 20%); margin: 0 auto; justify-content: center; text-align: center; gap: 20px; padding: 20px;" class="beforeendcontainer">
+                <p style="border: 3px solid #6a8e4d; background-color: rgb(246, 242, 242); padding: 20px; color: #6a8e4d; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; min-height: 100px;" class="beforeendgridbox">We prioritize the success of our customers</p>
+                <p style="border: 3px solid #6a8e4d; padding: 20px; color: #6a8e4d; background-color: rgb(246, 242, 242); font-size: 1.5rem; display: flex; align-items: center; justify-content: center; min-height: 100px;" class="beforeendgridbox">Trade based on trust</p>
+                <p style="border: 3px solid #6a8e4d; padding: 20px; color: #6a8e4d; background-color: rgb(246, 242, 242); font-size: 1.5rem; display: flex; align-items: center; justify-content: center; min-height: 100px;" class="beforeendgridbox">Meticulous supervision at every stage</p>
+                <p style="border: 3px solid #6a8e4d; padding: 20px; background-color: rgb(246, 242, 242);  color: #6a8e4d; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; min-height: 100px;" class="beforeendgridbox">Prioritizing a safe environment</p>
+            </div>
+            <style>
+                @media (max-width: 992px) {
+                    .beforeendcontainer {
+                        grid-template-columns: repeat(2, 40%) !important;
+                    }
+                }
+                @media (max-width: 768px) {
+                    .beforeendcontainer {
+                        grid-template-columns: 80% !important;
+                    }
+                    .beforeendgridbox {
+                        font-size: 1.8rem !important;
+                    }
+                }
+            </style>
+     </section>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
