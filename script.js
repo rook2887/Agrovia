@@ -1,34 +1,30 @@
-let isScrolling = false;
+// Get the buttons
+const whatsappButton = document.querySelector('.whatsapp-button');
+const backToTopButton = document.getElementById('back-to-top');
 
-window.addEventListener('wheel', (e) => {
-  e.preventDefault(); // Prevent default scrolling behavior
+// Function to check if the user has reached the bottom of the page
+function checkScroll() {
+  const scrollPosition = window.scrollY; // Current scroll position
+  const pageHeight = document.documentElement.scrollHeight; // Total height of the page
+  const viewportHeight = window.innerHeight; // Height of the viewport
 
-  if (isScrolling) return; // Prevent multiple triggers
-  isScrolling = true;
-
-  const sections = document.querySelectorAll('section');
-  let currentSection = 0;
-
-  // Find the current visible section
-  sections.forEach((section, index) => {
-    const rect = section.getBoundingClientRect();
-    if (rect.top >= 0 && rect.top <= window.innerHeight) {
-      currentSection = index;
-    }
-  });
-
-  // Determine the next section based on scroll direction
-  if (e.deltaY > 0 && currentSection < sections.length - 1) {
-    currentSection++;
-  } else if (e.deltaY < 0 && currentSection > 0) {
-    currentSection--;
+  // Show buttons if the user is near the bottom (e.g., within 100px of the bottom)
+  if (pageHeight - (scrollPosition + viewportHeight) < 100) {
+    whatsappButton.style.display = 'flex'; // Show WhatsApp button
+    backToTopButton.style.display = 'block'; // Show Back to Top button
+  } else {
+    whatsappButton.style.display = 'none'; // Hide WhatsApp button
+    backToTopButton.style.display = 'none'; // Hide Back to Top button
   }
+}
 
-  // Scroll to the next section
-  sections[currentSection].scrollIntoView({ behavior: 'smooth' });
+// Add scroll event listener
+window.addEventListener('scroll', checkScroll);
 
-  // Reset the scrolling lock after a delay
-  setTimeout(() => {
-    isScrolling = false;
-  }, 800); // Adjust delay to match scroll duration
+// Back to Top button functionality
+backToTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Smooth scroll
+  });
 });

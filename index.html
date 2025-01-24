@@ -623,8 +623,92 @@ width: 100%;}
                 <li style="font-size: 1.5rem; color: #2D473f;" ><img src="./images/Endicons (2).png" alt="Endicon"> info@agrovia.net</li>
                 <li style="font-size: 1.5rem; color: #2D473f;" ><img src="./images/Endicons (2).png" alt="Endicon"> Sales@agrovia.net</li>
             </ul>     
+            <a href="https://wa.me/+201005153059" class="whatsapp-button" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+              </a>
+              <button style="font-size: larger;" id="back-to-top" class="back-to-top-button">
+                <img src="./arrowup.png" alt="Arrow Up">
+              </button>
         </div>
-        <style>
+        <style>/* WhatsApp Button */
+            .whatsapp-button {
+              position: fixed;
+              bottom: 100px;
+              left: 10px;
+              background-color: #25d366; /* WhatsApp green */
+              color: white;
+              padding: 10px;
+              border-radius: 50%; /* Makes it a circle */
+              text-decoration: none;
+              font-size: 16px;
+              font-weight: bold;
+              display: flex;
+              align-items: center;
+              justify-content: center; /* Center the icon */
+              width: 50px; /* Same size as Back to Top button */
+              height: 50px; /* Same size as Back to Top button */
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+              transition: background-color 0.3s ease, transform 0.3s ease;
+              display: none; /* Hidden by default */
+            }
+            
+            .whatsapp-button:hover {
+              background-color: #128c7e; /* Darker green on hover */
+              transform: scale(1.1); /* Slightly enlarge on hover */
+            }
+            
+            .whatsapp-button img {
+              width: 24px;
+              height: 24px;
+            }
+            
+            /* Back to Top Button */
+            .back-to-top-button {
+              position: fixed;
+              bottom: 100px; /* Positioned above the WhatsApp button */
+              right: 10px;
+              font-size: 48px;
+              background-color: #25d366; /* WhatsApp green */
+              color: white;
+              border: none;
+              width: 50px; /* Same size as WhatsApp button */
+              height: 50px; /* Same size as WhatsApp button */
+              border-radius: 50%; /* Makes it a circle */
+              font-size: 24px;
+              cursor: pointer;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+              transition: background-color 0.3s ease, transform 0.3s ease;
+              display: none; /* Hidden by default */
+            }
+            
+            .back-to-top-button:hover {
+              background-color: #128c7e; /* Darker green on hover */
+              transform: scale(1.1); /* Slightly enlarge on hover */
+            }
+            
+            /* Responsive Design */
+            @media (max-width: 768px) {
+              .back-to-top-button {
+                bottom: 110px; /* Adjusted for smaller screens */
+              }
+            }
+/* WhatsApp Button */
+.whatsapp-button {
+  width: 70px; /* Increased size */
+  height: 70px; /* Increased size */
+}
+
+.whatsapp-button img {
+  width: 36px; /* Increased icon size */
+  height: 36px; /* Increased icon size */
+}
+
+/* Back to Top Button */
+.back-to-top-button {
+  width: 70px; /* Increased size */
+  height: 70px; /* Increased size */
+  font-size: 48px; /* Increased arrow size */
+}
               .endicon {
         text-align: left; /* Align text to the left */
     }
