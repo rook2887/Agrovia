@@ -296,6 +296,45 @@ width: 100%;}
         }
     }
 
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 20px; /* Space between grid items */
+        padding: 20px; /* Padding around the grid */
+    }
+
+    .grid-item {
+        display: flex;
+        justify-content: center; /* Center the image */
+        align-items: center; /* Center the image vertically */
+        /* border: 2px solid green; Optional: border around each item */
+        border-radius: 10%; /* Optional: rounded corners */
+        overflow: hidden; /* Hide overflow */
+    }
+
+    .grid-item img {
+        width: 80%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .learn-more img {
+    max-width: 20%; /* Ensure the image is responsive */
+    height: 20%; /* Maintain aspect ratio */
+    display: block; /* Ensure it behaves like a block element */
+    margin: 0 auto; /* Center the image */
+}
+
+    @media (max-width: 768px) {
+        .product-grid {
+            grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .product-grid {
+            grid-template-columns: 1fr; /* 1 column on very small screens */
+        }
+    }
     </style>
 </head>
 <body>
@@ -458,8 +497,25 @@ width: 100%;}
 <section class="unique-featured-products">
     <h2 class="unique-sub-title">Gallery</h2>
     <p class="unique-section-paragraph">Browse our food products today and experience the taste of excellence.</p>
-        </div>
+</section>
+<section class="product-grid">
+    <div class="grid-item">
+        <img src="./images/Homepagegallery (1).png" alt="Product 1">
     </div>
+    <div class="grid-item">
+        <img src="./images/Homepagegallery (2).png" alt="Product 2">
+    </div>
+    <div class="grid-item">
+        <img src="./images/Homepagegallery (3).png" alt="Product 3">
+    </div>
+    <div class="grid-item">
+        <img src="./images/Homepagegallery (4).png" alt="Product 4">
+    </div>
+</section>
+<section>
+<a href="#target-section" class="learn-more">
+    <img src="./images/Learnmorehomepage.png" alt="Learn More">
+</a>
 </section>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
