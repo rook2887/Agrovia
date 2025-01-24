@@ -116,6 +116,52 @@ width: 100%;}
         }
     }
 
+    .about-us-section {
+        background-image: url('./images/Strawberryaboutus.png'); /* Update with the correct path */
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 40px 20px;
+        color: white; /* Text color */
+        text-align: center; /* Center text */
+    }
+
+    .about-us-content {
+        max-width: 600px; /* Limit width for better readability */
+        margin-left: 45%;
+        padding: 20px; /* Padding around the content */
+        text-align: left;
+        text-wrap: wrap;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .about-us-section {
+            padding: 20px 10px; /* Reduce padding on smaller screens */
+        }
+
+        .about-us-content {
+            padding: 15px; /* Adjust padding for smaller screens */
+        }
+
+        h2 {
+            font-size: 2rem; /* Adjust title size */
+        }
+
+        p {
+            font-size: 1rem; /* Adjust paragraph size */
+        }
+    }
+
+    @media (max-width: 480px) {
+        h2 {
+            font-size: 1.5rem; /* Further adjust title size for very small screens */
+        }
+
+        p {
+            font-size: 0.9rem; /* Further adjust paragraph size */
+        }
+    }
+
     </style>
 </head>
 <body>
@@ -224,6 +270,15 @@ width: 100%;}
         </div>
     </div>
     <!-- End of statistics section -->
+
+    <section class="about-us-section">
+        <div class="about-us-content">
+            <h2 style="font-weight: bold;">About Us</h2>
+            <p>These values inform everything we do, from our strategy and operations to our interactions with clients, teams, and local communities. They are the foundation of our mission to drive sustainable practices at scale, and to be a leading ESG tech company in the industry.</p>
+            <p>With years of experience in the agricultural sector, we focus on implementing the latest sustainable agricultural technologies to ensure healthy and safe crop production.</p>
+            <p>Our team of experts works hard to ensure that every crop is grown with care and precision, adhering to the highest standards of quality and safety.</p>
+        </div>
+    </section>
 </section>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
