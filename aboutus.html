@@ -440,12 +440,6 @@ width: 100%;}
         <li><a href="gallery.html" style="text-decoration: none; color: inherit;">Gallery</a></li>
         <li><a href="contactus.html" style="text-decoration: none; color: inherit;">Contact Us</a></li>
             </ul>
-
-            <!-- <li><a href="index.html" style="text-decoration: none; color: inherit;">Home</li>
-                <li><a href="aboutus.html" style="text-decoration: none; color: inherit;">About Us</li>
-                <li><a href="ourproducts.html" style="text-decoration: none; color: inherit;">Our Products</li>
-                <li><a href="gallery.html" style="text-decoration: none; color: inherit;">Gallery</li>
-                <li><a href="gallery.html" style="text-decoration: none; color: inherit;">Contact Us</li> -->
         </nav>
 
 <style>
@@ -761,16 +755,32 @@ width: 100%;}
             <img src="./images/logo-0١.png" alt="main logo">
             <ul class="endicon">
                 <li style="font-size: 2rem; color: #2D473f; font-weight: bold;">Menu</li>
-                <li style="font-size: 1.5rem; color: #2D473f;">Home</li>
-                <li style="font-size: 1.5rem; color: #2D473f;">About Us</li>
-                <li style="font-size: 1.5rem; color: #2D473f;">Our Product</li>
-                <li style="font-size: 1.5rem; color: #2D473f;">Gallery</li>
-                <li style="font-size: 1.5rem; color: #2D473f;">Contact Us</li>
+                <li><a href="index.html" style="text-decoration: none; color: inherit; font-size: 1.5rem;">Home</a></li>
+                <li><a href="aboutus.html" style="text-decoration: none; color: inherit; font-size: 1.5rem;">About Us</a></li>
+                <li><a href="ourproducts.html" style="text-decoration: none; color: inherit; font-size: 1.5rem;">Our Products</a></li>
+                <li><a href="gallery.html" style="text-decoration: none; color: inherit; font-size: 1.5rem;">Gallery</a></li>
+                <li><a href="contactus.html" style="text-decoration: none; color: inherit; font-size: 1.5rem;">Contact Us</a></li>
             </ul>
+            <style>
+                /* Hover effect for links */
+.endicon li a:hover {
+    color: #2D473f; /* Darker color on hover */
+    font-weight: bold; /* Bold on hover */
+}
+
+/* Active page styling */
+.endicon li a[href="index.html"].active,
+.endicon li a[href="aboutus.html"].active,
+.endicon li a[href="ourproducts.html"].active,
+.endicon li a[href="gallery.html"].active,
+.endicon li a[href="contactus.html"].active {
+    color: #2D473f; /* Darker color for active page */
+    font-weight: bold; /* Bold for active page */
+}
+            </style>
             <ul class="endicon">
                 <li style="font-size: 2rem; color: #2D473f; font-weight: bold;">Help</li>
                 <li style="font-size: 1.5rem; color: #2D473f;">Privacy Policy</li>
-                <li style="font-size: 1.5rem; color: #2D473f;">Contact</li>
             </ul>
             <ul class="endicon">
                 <li style="font-size: 2rem; color: #2D473f; font-weight: bold;">Have Questions?</li>
