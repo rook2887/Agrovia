@@ -143,12 +143,12 @@ width: 100%;}
 
     /* Active state for home page */
     .nav-list li:first-child {
-        color: #2D473f; /* Darker color for active page */
-        font-weight: bold;
     }
 
     /* Make About Us clickable */
     .nav-list li:nth-child(2) {
+        color: #2D473f; /* Darker color for active page */
+        font-weight: bold;
         cursor: pointer;
     }
 
@@ -322,7 +322,7 @@ width: 100%;}
 
     .info-panel img {
         margin-right: 10px; /* Space between image and text */
-        width: 20px; /* Set a width for the checkmark image */
+        width: 100px; /* Set a width for the checkmark image */
         height: auto; /* Maintain aspect ratio */
     }
 
@@ -390,12 +390,24 @@ width: 100%;}
         justify-content: center;
         transition: transform 0.3s ease;
         flex: 1;
-        min-width: 200px;
-        max-width: 300px;
+        min-width: 250px;
+        max-width: 350px;
+        padding: 20px;
     }
 
     .core-value-img:hover {
         transform: scale(1.1);
+    }
+
+    /* Add responsive styling for smaller screens */
+    @media (max-width: 768px) {
+        .core-value-img img {
+            width: 150px !important; /* Override inline style for mobile */
+        }
+        .core-value-img {
+            min-width: 200px;
+            margin: 10px !important;
+        }
     }
 
     .section {
@@ -422,51 +434,49 @@ width: 100%;}
         </div>
         <nav class="nav">
             <ul class="flex-list nav-list">
-                
-                <li><a href="index.html" style="text-decoration: none; color: inherit; font-size: 1.5rem;">Home</a></li>
-                <li><a href="aboutus.html" style="text-decoration: none; color: inherit; font-size: 1.5rem;">About Us</a></li>
-                <li class="nav-item dropdown" style="display: flex; align-items: center;">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none; color: inherit; font-size: 1.5rem; padding: 0; margin: 0;">
-                        Our Products
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size: 1.5rem;">
-                        <li><a class="dropdown-item" href="fresh-fruits.html" style="text-decoration: none; color: inherit;">Fresh Fruits</a></li>
-                        <li><a class="dropdown-item" href="frozen-fruits.html" style="text-decoration: none; color: inherit;">Frozen Fruits</a></li>
-                        <li><a class="dropdown-item" href="frozen-vegetables.html" style="text-decoration: none; color: inherit;">Frozen Vegetables</a></li>
-                    </ul>
-                </li>
-                <li><a href="gallery.html" style="text-decoration: none; color: inherit; font-size: 1.5rem;">Gallery</a></li>
-                <li><a href="contactus.html" style="text-decoration: none; color: inherit; font-size: 1.5rem;">Contact Us</a></li>
+                <li><a href="index.html" style="text-decoration: none; color: inherit;">Home</a></li>
+        <li><a href="aboutus.html" style="text-decoration: none; color: inherit;">About Us</a></li>
+        <li class="nav-item dropdown" style="display: flex; align-items: center;">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none; color: inherit; font-size: 1.5rem; padding: 0; margin: 0;">
+                Our Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size: 1.5rem;">
+                <li><a class="dropdown-item" href="fresh-fruits.html" style="text-decoration: none; color: inherit;">Fresh Fruits</a></li>
+                <li><a class="dropdown-item" href="frozen-fruits.html" style="text-decoration: none; color: inherit;">Frozen Fruits</a></li>
+                <li><a class="dropdown-item" href="frozen-vegetables.html" style="text-decoration: none; color: inherit;">Frozen Vegetables</a></li>
+            </ul>
+        </li>
+        <li><a href="gallery.html" style="text-decoration: none; color: inherit;">Gallery</a></li>
+        <li><a href="contactus.html" style="text-decoration: none; color: inherit;">Contact Us</a></li>
             </ul>
         </nav>
+<!-- Bootstrap menu style -->
 
-        <!-- Bootstrap menu style -->
-
-        <style>
-            /* Ensure the dropdown toggle matches its peers */
+<style>
+    /* Ensure the dropdown toggle matches its peers */
 .nav-item.dropdown {
-    display: flex;
-    align-items: center;
+display: flex;
+align-items: center;
 }
 
 .nav-link.dropdown-toggle {
-    text-decoration: none !important;
-    color: inherit !important;
-    font-size: 1.5rem !important;
-    padding: 0 !important; /* Remove Bootstrap's default padding */
-    margin: 0 !important; /* Remove Bootstrap's default margin */
+text-decoration: none !important;
+color: inherit !important;
+font-size: 1.5rem !important;
+padding: 0 !important; /* Remove Bootstrap's default padding */
+margin: 0 !important; /* Remove Bootstrap's default margin */
 }
 
 /* Ensure the dropdown menu matches the styling */
 .dropdown-menu {
-    font-size: 1.5rem !important;
+font-size: 1.5rem !important;
 }
 
 .dropdown-item {
-    text-decoration: none !important;
-    color: inherit !important;
+text-decoration: none !important;
+color: inherit !important;
 }
-        </style>
+</style>
 
 <style>
         @media (max-width: 768px) {
@@ -477,247 +487,102 @@ width: 100%;}
 </style>
 
     </header>
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" style="height: 600px;">
-        <div class="carousel-inner" style="height: 100%;">
-            <div class="carousel-item active" style="height: 100%;">
-                <img class="d-block w-100" src="./images/Car1.png" alt="First slide" class="carousel-image">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1 class="big-text">Agrovia</h1>
-                    <h3>Your seeking journey ends here.</h3>
-                </div>
-            </div>
-            <div class="carousel-item" style="height: 100%;">
-                <img class="d-block w-100" src="./images/Car4.png" alt="Second slide" class="carousel-image">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1 class="big-text agrovia-fix">Here!</h1>
-                    <h3>Affordable IQF solutions tailored to your business and needs</h3>
-                </div>
-            </div>
-            <div class="carousel-item" style="height: 100%;">
-                <img class="d-block w-100" src="./images/Car2.png" alt="Third slide" class="carousel-image">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1 class="medium-text">Rooting for your success!</h1>
-                    <h3>Premium quality IQF produce that exceeds global standards.</h3>
-                </div>
-            </div>
-            <div class="carousel-item" style="height: 100%;">
-                <img class="d-block w-100" src="./images/Car3.png" alt="Fourth slide" class="carousel-image">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1 class="medium-text">Every product is a promise of freshness</h1>
-                    <h3>Premium quality IQF produce that exceeds global standards</h3>
-                </div>
-            </div>
-            <div class="carousel-item" style="height: 100%;">
-                <img class="d-block w-100" src="./images/Car6.png" alt="Fifth slide" class="carousel-image">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1 class="medium-text agriculture-fix";">Choose Agrovia</h1>
-                    <h3>for unmatched quality</h3>
-                </div>
-            </div>
-            <div class="carousel-item" style="height: 100%;">
-                <img class="d-block w-100" src="./images/Car5.png" alt="Sixth slide" class="carousel-image">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1 class="medium-text">Smell and taste some fresh fruits</h1>
-                    <h3>High quality frozen fruits and vegetables from Egypt's bountiful lands</h3>
-                </div>
+    
+    <section class="image-with-caption">
+        <div class="image-container">
+            <img src="./images/upscaled shit/upscayl_png_realesrgan-x4plus_4x/Car4.png" alt="strawberries">
+            <div class="caption">
+                <h1 style="font-weight: bolder; font-size: 4rem !important;">Guava</h1>
             </div>
         </div>
-        <div class="carousel-controls">
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </a>
-        </div>
-    </div>
+    </section>
 
 <style>
-    @media (max-width: 768px) {
-    .carousel-caption h1.big-text,
-    .carousel-caption h1.medium-text,
-    .carousel-caption h1.agrovia-fix,
-    .carousel-caption h1.agriculture-fix {
-        font-size: 3rem !important; /* Adjust the font size for h1 */
-        text-align: center; /* Center the text */
-        width: 100%; /* Ensure full width */
-        margin: 0 auto; /* Center horizontally */
+    /* Container for the image and caption */
+.image-with-caption {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Ensure the image doesn't overflow */
+}
+
+/* Image container */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto; /* Adjust height automatically */
+}
+
+/* Image styling */
+.image-container img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below the image */
+}
+
+/* Caption container */
+.caption {
+    position: absolute;
+    top: 50%; /* Move to the vertical center */
+    left: 50%; /* Move to the horizontal center */
+    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+    text-align: center; /* Center text */
+    color: white; /* Text color */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+    width: 90%; /* Limit width for better readability */
+    max-width: 800px; /* Maximum width for larger screens */
+}
+
+/* Caption heading */
+.caption h1 {
+    font-size: 2.5rem; /* Large font size for heading */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+/* Caption paragraph */
+.caption p {
+    font-size: 1.2rem; /* Medium font size for paragraph */
+    margin: 0; /* Remove default margin */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .caption h1 {
+        font-size: 2rem; /* Smaller font size for smaller screens */
     }
 
-    .carousel-caption h3 {
-        font-size: 1.5rem !important; /* Adjust the font size for h3 */
-        text-align: center; /* Center the text */
-        width: 100%; /* Ensure full width */
-        margin: 0 auto; /* Center horizontally */
+    .caption p {
+        font-size: 1rem; /* Smaller font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .caption h1 {
+        font-size: 1.5rem; /* Even smaller font size for very small screens */
+    }
+
+    .caption p {
+        font-size: 0.9rem; /* Even smaller font size for very small screens */
     }
 }
 </style>
 
-<section class="section1">
-    <!-- New statistics section -->    
-    <div class="stats-section" style="background-image: url('./images/Backgroundicons.png'); background-size: cover; background-repeat: no-repeat; padding: 20px 0; display: block; margin: 0 auto; width: 100%; max-width: 1400px;">
-        <div class="flex-row-list" style="display: flex; justify-content: space-evenly; align-items: center; margin: 0 auto; max-width: 1200px;">
-            <div class="flex-item" style="text-align: center; margin: 0 10px;">
-                <img src="./images/Truck.png" alt="Truck" style="width: 100px; height: auto;">
-                <h2 style="margin: 0; font-size: 2rem; font-weight: bold; color: #000000;">2000</h2>
-                <p>Tons/year</p>
-            </div>
-            <div class="flex-item" style="text-align: center; margin: 0 10px;">
-                <img src="./images/ship.png" alt="Ship" style="width: 100px; height: auto;">
-                <h2 style="margin: 0; font-size: 2rem; font-weight: bold; color: #000000;">120</h2>
-                <p>Shipments</p>
-            </div>
-            <div class="flex-item" style="text-align: center; margin: 0 10px;">
-                <img src="./images/ribbon.png" alt="Quality" style="width: 100px; height: auto;">
-                <h2 style="margin: 0; font-size: 2rem; font-weight: bold; color: #000000;">100</h2>
-                <p>Quality</p>
-            </div>
-            <div class="flex-item" style="text-align: center; margin: 0 10px;">
-                <img src="./images/callcenter.png" alt="Service" style="width: 100px; height: auto;">
-                <h2 style="margin: 0; font-size: 2rem;font-weight: bold;  color: #000000;">24/hr</h2>
-                <p>Service</p>
-            </div>
-        </div>
-    </div>
-    <!-- End of statistics section -->
-
-    <section class="about-us-section section2">
-        <div class="about-us-content">
-            <h2 style="font-weight: bold;">About Us</h2>
-            <p>These values inform everything we do, from our strategy and operations to our interactions with clients, teams, and local communities. They are the foundation of our mission to drive sustainable practices at scale, and to be a leading ESG tech company in the industry.</p>
-            <p>With years of experience in the agricultural sector, we focus on implementing the latest sustainable agricultural technologies to ensure healthy and safe crop production.</p>
-            <p>Our team of experts works hard to ensure that every crop is grown with care and precision, adhering to the highest standards of quality and safety.</p>
-        </div>
-    </section>
-</section>
-
-<section class="unique-featured-products">
-    <h3 style="font-style: italic; color: #2D473f;" class="unique-section-title">Featured Products</h3>
-    <h2 class="unique-sub-title">Our Products</h2>
-    <p class="unique-section-paragraph">Discover our exquisite array of high-quality products, perfectly suited for global markets.</p>
-    <div class="unique-product-grid">
-        <div class="unique-product-box">
-            <img src="./images/IQF Fruits.png" alt="IQF Fruits" class="unique-product-image">
-            <h4 style="margin-top: 20px; font-size: xx-large; color: #2D473f;"> IQF Fruits</h4>
-        </div>
-        <div class="unique-product-box">
-            <img src="./images/IQF vegetables.png" alt="IQF Vegetables" class="unique-product-image">
-            <h4 style="margin-top: 20px; font-size: xx-large; color: #2D473f;">IQF Vegetables</h4>
-        </div>
-    </div>
-</section>
-<style>
-    .unique-product-box h4 {
-        margin-top: 20px;
-        margin-bottom: 20px !important;
-        font-size: xx-large;
-        color: #2D473f;
-    }
-</style>
-<section>
-    <h3 style="text-align: center; color: #2D473f; font-style: italic;" class="unique-section-title">Product on fire</h3>
-    <p style="text-align: center;" class="unique-section-paragraph">Whether you're looking to enhance your product line or satisfy customer cravings, our premium strawberries are the ideal choice. Let's elevate your offerings with the best of Egypt!</p>
-</section>
-<section class="info-grid">
-    <div class="video-panel">
-        <div class="video-container">
-            <video controls poster="./aiorange.jpg">
-                <source src="./Fruit video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="info-panel">
-        <h2 style= "color: #6a8e4d; font-size: 3rem;" class="unique-section-title">FRESH STRAWBERRY</h2>
-        <p style="font-size: 1.5rem;">Discover the availability of our exceptional strawberries</p>
-        <ul>
-            <li><img src="./images/checkmark.png" alt="Checkmark"> Available in several grades to meet your requirements</li>
-            <li><img src="./images/checkmark.png" alt="Checkmark"> Offered in different sizes to suit your needs</li>
-            <li><img src="./images/checkmark.png" alt="Checkmark"> Comes in various shapes for diverse applications</li>
-            <li><img src="./images/checkmark.png" alt="Checkmark"> Available in many packaging options for convenience in use</li>
-            <li><img src="./images/checkmark.png" alt="Checkmark"> Comes in many standards to comply with your country's regulations</li>
-        </ul>
-    </div>
-</section>
-<section class="unique-featured-products">
-    <h2 class="unique-sub-title">Gallery</h2>
-    <p class="unique-section-paragraph">Browse our food products today and experience the taste of excellence.</p>
-</section>
 <section class="product-grid">
     <div class="grid-item">
-        <img src="./images/Homepagegallery (1).png" alt="Product 1">
+        <img src="./imagesfruitdetails/our product/freshguava/freshguava (1).png" alt="Product 1">
     </div>
-    <div class="grid-item">
-        <img src="./images/Homepagegallery (2).png" alt="Product 2">
-    </div>
-    <div class="grid-item">
-        <img src="./images/Homepagegallery (3).png" alt="Product 3">
-    </div>
-    <div class="grid-item">
-        <img src="./images/Homepagegallery (4).png" alt="Product 4">
-    </div>
-</section>
-<section>
-<a href="#target-section" class="learn-more">
-    <img src="./images/Learnmorehomepage.png" alt="Learn More">
-</a>
-</section>
-<section>
-    <h3 style="text-align: center; color:#6a8e4d; font-style: italic;" class="unique-section-title">Our core values</h3>
-    <p style="text-align: center;" class="unique-section-paragraph">We grow our business according to three key pillars: trust, quality and supply</p>
-</section>
-<section>
-    <!-- New statistics section -->
-    <div class="stats-section" style="background-image: url('./images/Backgroundicons.png'); background-size: cover; background-repeat: no-repeat; padding: 20px 0;">
-        <div class="flex-row-list" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; margin: 0 auto; max-width: 1200px; gap: 20px;">
-            <div class="flex-item core-value-img" style="text-align: center; margin: 0 10px;">
-                <img src="./images/Customerhomepage (4).png" alt="Truck" style="width: 100px; height: auto; display: block; margin: 0 auto;">
-                <p style="font-weight: bolder; color: #6a8e4d; font-size: 2rem;">Customer First</p>
-            </div>
-            <div class="flex-item core-value-img" style="text-align: center; margin: 0 10px;">
-                <img src="./images/Customerhomepage (1).png" alt="Ship" style="width: 100px; height: auto; display: block; margin: 0 auto;">
-                <p style="font-weight: bolder; color: #6a8e4d; font-size: 2rem;">Trust</p>
-            </div>
-            <div class="flex-item core-value-img" style="text-align: center; margin: 0 10px;">
-                <img src="./images/Customerhomepage (2).png" alt="Quality" style="width: 100px; height: auto; display: block; margin: 0 auto;">
-                <p style="font-weight: bolder; color: #6a8e4d; font-size: 2rem;">Quality</p>
-            </div>
-            <div class="flex-item core-value-img" style="text-align: center; margin: 0 10px;">
-                <img src="./images/Customerhomepage (3).png" alt="Service" style="width: 100px; height: auto; display: block; margin: 0 auto;">
-                <p style="font-weight: bolder; color: #6a8e4d; font-size: 2rem;">Sustainability</p>
-            </div>
-        </div>
-        <section class="beforeendgrid">
-            <div style="display: grid; grid-template-columns: repeat(4, 20%); margin: 0 auto; justify-content: center; text-align: center; gap: 20px; padding: 20px;" class="beforeendcontainer">
-                <p style="border: 5px solid #6a8e4d; border-radius: 10px;   background-color: rgb(246, 242, 242); padding: 20px; color: #6a8e4d; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; min-height: 200px; min-width: 200px;" class="beforeendgridbox">We prioritize the success of our customers</p>
-                <p style="border: 5px solid #6a8e4d; border-radius: 10px;  padding: 20px; color: #6a8e4d; background-color: rgb(246, 242, 242); font-size: 1.5rem; display: flex; align-items: center; justify-content: center; min-height: 200px; min-width: 200px;" class="beforeendgridbox">Trade based on trust</p>
-                <p style="border: 5px solid #6a8e4d; border-radius: 10px;  padding: 20px; color: #6a8e4d; background-color: rgb(246, 242, 242); font-size: 1.5rem; display: flex; align-items: center; justify-content: center; min-height: 200px; min-width: 200px;" class="beforeendgridbox">Meticulous supervision at every stage</p>
-                <p style="border: 5px solid #6a8e4d; padding: 20px; border-radius: 10px;  background-color: rgb(246, 242, 242);  color: #6a8e4d; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; min-height: 200px; min-width: 200px;" class="beforeendgridbox">Prioritizing a safe environment</p>
-            </div>
-            <style>
-                @media (max-width: 992px) {
-                    .beforeendcontainer {
-                        grid-template-columns: repeat(2, 40%) !important;
-                    }
-                }
-                @media (max-width: 768px) {
-                    .beforeendcontainer {
-                        grid-template-columns: 80% !important;
-                    }
-                    .beforeendgridbox {
-                        font-size: 1.8rem !important;
-                    }
-                }
-            </style>
-     </section>
-    </div>
-    <!-- End of statistics section -->
     
+    <div class="grid-item">
+        <img src="./imagesfruitdetails/our product/freshguava/freshguava (2).png" alt="Product 1">
+    </div>
     
+    <div class="grid-item">
+        <img src="./imagesfruitdetails/our product/freshguava/freshguava (3).png" alt="Product 1">
+    </div>
+</section>
+
+
      <section class="beforeendgrid">
-        <div style="display: grid; grid-template-columns: repeat(4, 20%); margin: 0 auto; justify-content: center; text-align: center; gap: 10px; padding: 20px;" class="beforeendcontainer">
+        <div style="display: grid; grid-template-columns: repeat(4, 20%); margin: 0 auto; justify-content: center; text-align: center; gap: 10px; padding: 20px; border-top: 1px solid black;" class="beforeendcontainer">
             <img src="./images/logo-0١.png" alt="main logo">
             <ul class="endicon">
                 <li style="font-size: 2rem; color: #2D473f; font-weight: bold;">Menu</li>
@@ -732,14 +597,72 @@ width: 100%;}
                         <li><a class="dropdown-item" href="frozen-fruits.html" style="text-decoration: none; color: inherit;">Frozen Fruits</a></li>
                         <li><a class="dropdown-item" href="frozen-vegetables.html" style="text-decoration: none; color: inherit;">Frozen Vegetables</a></li>
                     </ul>
-                </li>                
-                <li><a href="gallery.html" style="text-decoration: none; color: inherit; font-size: 1.5rem;">Gallery</a></li>
+                </li>                <li><a href="gallery.html" style="text-decoration: none; color: inherit; font-size: 1.5rem;">Gallery</a></li>
                 <li><a href="contactus.html" style="text-decoration: none; color: inherit; font-size: 1.5rem;">Contact Us</a></li>
             </ul>
-
             <style>
 
+/* Base styles for the image-with-caption section */
+.image-with-caption {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Ensure the image doesn't overflow */
+}
 
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Full height of the parent */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%; /* Full height of the container */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    display: block; /* Remove extra space below the image */
+}
+
+.caption {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+    text-align: center; /* Center text */
+    color: white; /* Text color */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+    width: 90%; /* Limit width for better readability */
+    max-width: 800px; /* Maximum width for larger screens */
+}
+
+.caption h1 {
+    font-size: 8rem; /* Large font size for heading */
+    font-weight: bolder; /* Bold font weight */
+    margin: 0; /* Remove default margin */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .caption h1 {
+        font-size: 6rem; /* Slightly smaller font size for large tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .image-with-caption {
+        height: 50vh; /* Reduce height for smaller screens */
+    }
+
+    .caption h1 {
+        font-size: 4rem; /* Smaller font size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .caption h1 {
+        font-size: 2.5rem; /* Even smaller font size for mobile devices */
+    }
+}
 
                 /* Hover effect for links */
 .endicon li a:hover {
@@ -757,7 +680,6 @@ width: 100%;}
     font-weight: bold; /* Bold for active page */
 }
             </style>
-
             <ul class="endicon">
                 <li style="font-size: 2rem; color: #2D473f; font-weight: bold;">Help</li>
                 <li style="font-size: 1.5rem; color: #2D473f;">Privacy Policy</li>
