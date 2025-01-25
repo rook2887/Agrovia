@@ -586,7 +586,113 @@ width: 100%;}
 </section>
     
 
-  
+<div class="value-grid">
+    <!-- Box 1 -->
+    <div class="value-card health-focus">
+      <h3 class="value-title">Health Centric Practices</h3>
+      <p class="value-description">We strive to provide products that enhance the health of the end customer while keeping in account the health of our land and the environment.</p>
+    </div>
+
+    <!-- Box 2 -->
+    <div class="value-card quality-commitment light-text">
+      <h3 class="value-title">Responsibility in Quality</h3>
+      <p class="value-description">We provide top-quality fruits and vegetables, while also being committed to high standards of ethical, social, and environmental responsibility.</p>
+    </div>
+
+    <!-- Box 3 -->
+    <div class="value-card integrity-driven">
+      <h3 class="value-title">Work with Integrity</h3>
+      <p class="value-description">We sustain integrity and transparency in growing, exporting, and every process in between.</p>
+    </div>
+
+    <!-- Box 4 -->
+    <div class="value-card unity-powered light-text">
+      <h3 class="value-title">Strength in Unity</h3>
+      <p class="value-description">We are stronger with the support of our growers and our global network of suppliers, who enable us to provide fresh and healthy products.</p>
+    </div>
+  </div>
+
+  <style>
+
+    /* Light Text Styling */
+.light-text .value-title,
+.light-text .value-description {
+  color: white; /* Set text color to white */
+}
+/* Grid Container */
+.value-grid {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  gap: 20px; /* Adjust spacing between boxes */
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+/* Value Card Styling */
+.value-card {
+  width: 250px; /* Fixed width */
+  height: 300px; /* Fixed height */
+  padding: 15px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top */
+}
+
+/* Title Styling */
+.value-title {
+  margin-bottom: 10px; /* Space below the title */
+  padding-bottom: 10px;
+  border-bottom: 3px solid darkgreen; /* Dark green border under the title */
+  font-size: 18px;
+  color: #333;
+}
+
+/* Description Styling */
+.value-description {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 0; /* Remove default margin-top */
+}
+
+/* Optional: Add unique background colors or accents for each card */
+.health-focus {
+  background-color: #F0F0F0; /* Light green for health focus */
+}
+
+.quality-commitment {
+  background-color: #2D4B3A; /* Light orange for quality commitment */
+  color: white;
+}
+
+.integrity-driven {
+  background-color: #F0F0F0; /* Light blue for integrity */
+}
+
+.unity-powered {
+  background-color: #7DBF3B; /* Light pink for unity */
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .value-grid {
+    justify-content: center; /* Center items on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .value-card {
+    width: 250px; /* Keep fixed width */
+    height: 300px; /* Keep fixed height */
+  }
+}
+
+  </style>
     
      <section class="beforeendgrid">
         <div style="display: grid; grid-template-columns: repeat(4, 20%); margin: 0 auto; justify-content: center; text-align: center; gap: 10px; padding: 20px; border-top: 1px solid black;" class="beforeendcontainer">
