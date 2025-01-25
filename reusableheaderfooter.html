@@ -432,8 +432,84 @@ width: 100%;}
 
     </header>
    
+    <section class="image-with-caption">
+        <div class="image-container">
+            <img src="./images/upscaled shit/upscayl_png_realesrgan-x4plus_4x/Car4.png" alt="strawberries">
+            <div class="caption">
+                <h1>Welcome to Agrovia</h1>
+                <p>Delivering fresh and frozen fruits and vegetables worldwide.</p>
+            </div>
+        </div>
+    </section>
 
-    
+<style>
+    /* Container for the image and caption */
+.image-with-caption {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Ensure the image doesn't overflow */
+}
+
+/* Image container */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto; /* Adjust height automatically */
+}
+
+/* Image styling */
+.image-container img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below the image */
+}
+
+/* Caption container */
+.caption {
+    position: absolute;
+    top: 50%; /* Move to the vertical center */
+    left: 50%; /* Move to the horizontal center */
+    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+    text-align: center; /* Center text */
+    color: white; /* Text color */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+    width: 90%; /* Limit width for better readability */
+    max-width: 800px; /* Maximum width for larger screens */
+}
+
+/* Caption heading */
+.caption h1 {
+    font-size: 2.5rem; /* Large font size for heading */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+/* Caption paragraph */
+.caption p {
+    font-size: 1.2rem; /* Medium font size for paragraph */
+    margin: 0; /* Remove default margin */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .caption h1 {
+        font-size: 2rem; /* Smaller font size for smaller screens */
+    }
+
+    .caption p {
+        font-size: 1rem; /* Smaller font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .caption h1 {
+        font-size: 1.5rem; /* Even smaller font size for very small screens */
+    }
+
+    .caption p {
+        font-size: 0.9rem; /* Even smaller font size for very small screens */
+    }
+}
+</style>
         
             <style>
                 @media (max-width: 992px) {
