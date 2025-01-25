@@ -1,4 +1,9 @@
-
+ <li><a href="aboutus.html" style="text-decoration: none; color: inherit;">Home</li>
+                    <li><a href="aboutus.html" style="text-decoration: none; color: inherit;">About Us</li>
+                    <li><a href="ourproducts.html" style="text-decoration: none; color: inherit;">Our Products</li>
+                    <li><a href="gallery.html" style="text-decoration: none; color: inherit;">Gallery</li>
+                    <li><a href="gallery.html" style="text-decoration: none; color: inherit;">Contact Us</li>
+                    
 
 <section class="Aboutusmain">
     <h1>About Us</h1>
