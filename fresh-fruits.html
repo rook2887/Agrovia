@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrovia</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -487,15 +481,17 @@ color: inherit !important;
 </style>
 
     </header>
-    
+
     <section class="image-with-caption">
         <div class="image-container">
             <img src="./images/upscaled shit/upscayl_png_realesrgan-x4plus_4x/Car4.png" alt="strawberries">
             <div class="caption">
-                <h1 style="font-weight: bolder; font-size: 8rem !important;">Fresh Fruits</h1>
+                <h1 style="font-weight: bolder; font-size: 4rem !important;">About Us</h1>
             </div>
         </div>
     </section>
+
+    
 
 <style>
     /* Container for the image and caption */
@@ -565,8 +561,119 @@ color: inherit !important;
     }
 }
 </style>
+ 
+   
 
-    
+<div class="fruit-grid">
+    <div class="fruit-card">
+      <div class="fruit-media">
+        <img src="./images/Fresh Fruits/Fresh fruits (2).png" alt="Image 1">
+      </div>
+      <div class="fruit-content">
+        <h1 class="fruit-title">Mango</h1>
+        <h2 class="fruit-subtitle">Fresh Mango</h2>
+        <button class="fruit-action">
+          <img src="./images/Learnmorehomepage.png" alt="Button">
+        </button>
+      </div>
+    </div>
+    <div class="fruit-card">
+      <div class="fruit-media">
+        <img src="image2.jpg" alt="Image 2">
+      </div>
+      <div class="fruit-content">
+        <h1 class="fruit-title">Title 2</h1>
+        <h2 class="fruit-subtitle">Subtitle 2</h2>
+        <button class="fruit-action">
+          <img src="button-icon.png" alt="Button">
+        </button>
+      </div>
+    </div>
+    <!-- Add more fruit cards as needed -->
+  </div>
+
+  <!-- style for fruit/vegetable grid -->
+
+<style>
+    /* Base styles for the fruit grid */
+.fruit-grid {
+  display: grid;
+  gap: 20px; /* Adjust the gap between cards */
+  padding: 20px;
+}
+
+/* Styles for each fruit card */
+.fruit-card {
+  display: flex;
+  flex-direction: column; /* Stack vertically on smaller screens */
+  border: 1px solid #ccc; /* Optional: Add a border for visual separation */
+  border-radius: 8px; /* Optional: Rounded corners */
+  overflow: hidden; /* Ensure content stays within the card */
+  background-color: #fff; /* Optional: Add a background color */
+}
+
+/* Fruit media (image) */
+.fruit-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Fruit content (text and button) */
+.fruit-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px; /* Add padding for spacing */
+}
+
+.fruit-title {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333; /* Adjust text color */
+}
+
+.fruit-subtitle {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #666; /* Adjust text color */
+}
+
+.fruit-action {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px; /* Add spacing above the button */
+}
+
+.fruit-action img {
+  width: 30px; /* Adjust button icon size */
+  height: auto;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .fruit-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+  }
+
+  .fruit-card {
+    flex-direction: row; /* Arrange media and content horizontally */
+  }
+
+  .fruit-media {
+    flex: 1; /* Take up half the space */
+  }
+
+  .fruit-content {
+    flex: 1; /* Take up half the space */
+    padding-left: 20px; /* Add spacing between image and text */
+  }
+}
+</style>
+
 
      <section class="beforeendgrid">
         <div style="display: grid; grid-template-columns: repeat(4, 20%); margin: 0 auto; justify-content: center; text-align: center; gap: 10px; padding: 20px; border-top: 1px solid black;" class="beforeendcontainer">
