@@ -1,0 +1,27 @@
+.Head {
+	background-color: #2D473f;
+	padding: 10px 0;
+	color: white;
+}
+
+.Head .flex-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.Head .icon {
+	width: 20px;
+	height: 20px;
+}
+
+@media (max-width: 768px) {
+	.Head .flex-list {
+		flex-direction: column;
+		text-align: center;
+	}
+}
