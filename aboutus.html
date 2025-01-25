@@ -390,12 +390,24 @@ width: 100%;}
         justify-content: center;
         transition: transform 0.3s ease;
         flex: 1;
-        min-width: 200px;
-        max-width: 300px;
+        min-width: 250px;
+        max-width: 350px;
+        padding: 20px;
     }
 
     .core-value-img:hover {
         transform: scale(1.1);
+    }
+
+    /* Add responsive styling for smaller screens */
+    @media (max-width: 768px) {
+        .core-value-img img {
+            width: 150px !important; /* Override inline style for mobile */
+        }
+        .core-value-img {
+            min-width: 200px;
+            margin: 10px !important;
+        }
     }
 
     .section {
@@ -586,7 +598,7 @@ width: 100%;}
 </section>
     
 
-<div class="value-grid">
+<div  style="margin-bottom: 20px;"  class="value-grid">
     <!-- Box 1 -->
     <div class="value-card health-focus">
       <h3 class="value-title">Health Centric Practices</h3>
@@ -697,7 +709,47 @@ width: 100%;}
 }
 
   </style>
-    
+ 
+ <section>
+    <h3 style="text-align: center; color:#2D473f; font-weight: bold; margin-top: 50px; margin-bottom: 50px;" class="unique-section-title">Accredited by</h3>
+</section>
+<section>
+    <!-- New statistics section -->
+    <div class="stats-section">
+        <div class="flex-row-list" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; margin: 0 auto; max-width: 1200px; gap: 40px;">
+            <div class="flex-item core-value-img" style="text-align: center; margin: 0 20px;">
+                <img src="./Acrrlogos (1).png" alt="Truck" style="width: 200px; height: auto; display: block; margin: 0 auto;">
+            </div>
+            <div class="flex-item core-value-img" style="text-align: center; margin: 0 20px;">
+                <img src="./Acrrlogos (4).png" alt="Ship" style="width: 200px; height: auto; display: block; margin: 0 auto;">
+            </div>
+            <div class="flex-item core-value-img" style="text-align: center; margin: 0 20px;">
+                <img src="./Acrrlogos (3).png" alt="Quality" style="width: 200px; height: auto; display: block; margin: 0 auto;">
+            </div>
+            <div class="flex-item core-value-img" style="text-align: center; margin: 0 20px;">
+                <img src="./Acrrlogos (2).png" alt="Service" style="width: 200px; height: auto; display: block; margin: 0 auto;">
+            </div>
+        </div> 
+        
+        <section class="beforeendgrid">
+            
+            <style>
+                @media (max-width: 992px) {
+                    .beforeendcontainer {
+                        grid-template-columns: repeat(2, 40%) !important;
+                    }
+                }
+                @media (max-width: 768px) {
+                    .beforeendcontainer {
+                        grid-template-columns: 80% !important;
+                    }
+                    .beforeendgridbox {
+                        font-size: 1.8rem !important;
+                    }
+                }
+            </style>
+     </section>
+
      <section class="beforeendgrid">
         <div style="display: grid; grid-template-columns: repeat(4, 20%); margin: 0 auto; justify-content: center; text-align: center; gap: 10px; padding: 20px; border-top: 1px solid black;" class="beforeendcontainer">
             <img src="./images/logo-0١.png" alt="main logo">
