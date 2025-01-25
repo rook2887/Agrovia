@@ -322,7 +322,7 @@ width: 100%;}
 
     .info-panel img {
         margin-right: 10px; /* Space between image and text */
-        width: 20px; /* Set a width for the checkmark image */
+        width: 100px; /* Set a width for the checkmark image */
         height: auto; /* Maintain aspect ratio */
     }
 
@@ -472,7 +472,121 @@ width: 100%;}
                 color: #2D473f;
             }
         </style>
+
+
+<style>
+    /* General Styles */
+
+    .logoabout {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .mission-row,
+    .vision-row,
+    .values-row {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      padding: 20px 20px;
+      margin: 0 auto;
+    }
+
+    .mission-logo,
+    .vision-logo,
+    .values-logo {
+      width: 100px; /* Fixed width for the logo */
+      height: 100px; /* Fixed height for the logo */
+      margin-right: 20px;
+      flex-shrink: 0; /* Prevents the logo from shrinking or growing */
+    }
+
+    .mission-content,
+    .vision-content,
+    .values-content {
+      flex: 1; /* Allows the content to grow and take up remaining space */
+    }
+
+    .mission-content h1,
+    .vision-content h1,
+    .values-content h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #2D473f;
+    }
+
+    .mission-content p,
+    .vision-content p,
+    .values-content p {
+      margin: 5px 0 0 0;
+      font-size: 16px;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+  .mission-row,
+  .vision-row,
+  .values-row {
+    flex-direction: column; /* Stacks logo and content vertically */
+    align-items: center; /* Centers items horizontally */
+  }
+
+  .mission-logo,
+  .vision-logo,
+  .values-logo {
+    margin-right: 0; /* Removes the right margin */
+    margin-bottom: 20px; /* Adds space between logo and content */
+  }
+}
     
+  </style>
+
+  <!-- First Row: Mission -->
+   <section class="logoabout">
+  <div class="mission-row">
+    <div class="mission-logo"> <img src="./Aboutuslogos (2).png" alt="aboutuslogo"></div>
+    <div class="mission-content">
+      <h1>Our Mission</h1>
+      <p>
+        Our work is motivated with the goal of producing standardized, high-quality
+        products; we partner in success with our suppliers and customers by
+        serving the common goal of responsible agriculture. We adapt the product
+        and its packaging to the consumers' expectations and habits in the
+        country that we export to. We enhance peoples' lives through our products
+        which are fresh, tasty, and healthy; for everyone all over the world to
+        enjoy.
+      </p>
+    </div>
+  </div>
+
+  <!-- Second Row: Vision -->
+  <div class="vision-row">
+    <div class="vision-logo"><img src="./Aboutuslogos (1).png" alt="aboutuslogo"></div>
+    <div class="vision-content">
+      <h1>Our Vision</h1>
+      <p>
+        To be the leading supplier of fresh fruits and vegetables worldwide, and to
+        impact other farms and suppliers, on providing healthy products that are
+        grown, packed and exported responsibly.
+      </p>
+    </div>
+  </div>
+
+  <!-- Third Row: Values -->
+  <div class="values-row">
+    <div class="values-logo"><img src="./Aboutuslogos (3).png" alt="aboutuslogo"></div>
+    <div class="values-content">
+      <h1>Our Values</h1>
+      <p>
+        Our values strengthen our company culture, they guide the way we work
+        with our customers, partners, our communities, and with each other as a
+        team. Our four main values are as follows:
+      </p>
+    </div>
+  </div>
+</section>
+    
+
+  
     
      <section class="beforeendgrid">
         <div style="display: grid; grid-template-columns: repeat(4, 20%); margin: 0 auto; justify-content: center; text-align: center; gap: 10px; padding: 20px; border-top: 1px solid black;" class="beforeendcontainer">
