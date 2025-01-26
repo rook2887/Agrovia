@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrovia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="gradient.scss">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+        .carousel-image {
+    height: 100%; /* Ensure the image takes full height */
+    width: 100%; /* Ensure the image takes full width */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    image-rendering: -webkit-optimize-contrast; /* Improve rendering on some browsers */
+    image-rendering: crisp-edges; /* Improve rendering on some browsers */}
+
+    .carousel-caption {
+    position: absolute;
+    bottom: 40%; /* Position from the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    color: white; /* Text color */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+width: 100%;}
+
+
+            
+    .big-text {
+        font-size: 8rem; /* Adjust the size as needed */
+    }
+
+    .medium-text {
+        font-size: 4rem;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: rgba(0, 0, 0, 0.5); /* Dark background with transparency */
+        border-radius: 50%; /* Make the background round */
+        padding: 10px; /* Add some padding for better click area */
+        color: white; /* Text color for visibility */}
+
+    .carousel-controls {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%); /* Center vertically */
+        display: flex;
+        justify-content: space-between; /* Space controls to the left and right */
+        width: 100%; /* Full width for controls */
+        padding: 0 15px; /* Optional: Add padding for better spacing */
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        border-radius: 50%; /* Round background */
+        padding: 10px; /* Padding around the icons */
+    }
+
+    @media (max-width: 768px) {
+        .carousel-inner img {
+            height: 100%; /* Set the height of carousel images to full size */
+            object-fit: cover; /* Ensure the image covers the area without distortion */
+        }
+
+        h1.agriculture-fix {
+            font-size: 0.5rem; /* Adjust the font size for this specific title */
+        }
+
+        .carousel-caption {
+            display: block !important; /* Force captions to be displayed */
+            opacity: 1 !important; /* Ensure captions are fully visible */
+            visibility: visible !important; /* Ensure captions are visible */
+            top: 20%; /* Center vertically */
+        }
+
+        .carousel-caption h1.agrovia-fix {
+            font-size: 6rem;
+        }
+
+        .carousel-caption h1.agriculture-fix {
+            font-size: 3rem !important; /* Force the font size to be smaller */
+        }
+
+        .logo {
+            margin-left: 0; /* Remove left margin on smaller screens */
+            width: 100%; /* Full width for the logo */
+        }
+
+        .logo img {
+            margin: 0; /* Remove margins */
+            margin-top: 5%;
+            width: auto; /* Adjust width as needed */
+        }
+
+        .nav {
+            margin: 0; /* Remove all margins */
+            padding: 0; /* Remove all padding */
+            width: 100%; /* Optional: Make nav take full width */
+            text-align: center; /* Center text within the nav */
+        }
+
+        .nav-list {
+            display: flex; /* Use flexbox for centering */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            padding: 0; /* Remove padding if necessary */
+            width: 100%; /* Optional: Make nav list take full width */
+            margin-top: 5%;
+        }
+
+        .nav-list li {
+            margin-bottom: 10px; /* Space between items */
+            margin-right: 0; /* Remove right margin for vertical layout */
+        }
+    }
+
+    .nav-list li {
+        color: #808080; /* Gray color for non-active items */
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: normal;
+    }
+
+    .nav-list li:hover {
+        color: #2D473f; /* Darker color on hover */
+        font-weight: bold;
+    }
+
+    /* Active state for home page */
+    .nav-list li:first-child {
+    }
+
+    /* Make About Us clickable */
+    .nav-list li:nth-child(2) {
+        color: #2D473f; /* Darker color for active page */
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .nav-list li:nth-child(2):hover {
+        color: #2D473f;
+        font-weight: bold;
+    }
+    
+    .about-us-section {
+        background-image: url('./images/Strawberryaboutus.png'); /* Update with the correct path */
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 40px 20px;
+        color: white; /* Text color */
+        text-align: center; /* Center text */
+    }
+
+    .about-us-content {
+        max-width: 600px; /* Limit width for better readability */
+        margin-left: 45%;
+        padding: 20px; /* Padding around the content */
+        text-align: left;
+        text-wrap: wrap;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .about-us-section {
+            padding: 20px 10px; /* Reduce padding on smaller screens */
+            text-align: center; /* Center text */
+        }
+
+        .about-us-content {
+            padding: 15px; /* Adjust padding for smaller screens */
+            margin: 0 auto; /* Center the content */
+            max-width: 100%; /* Ensure it takes full width */
+        }
+
+        h2 {
+            font-size: 2rem; /* Adjust title size */
+        }
+
+        p {
+            font-size: 1rem; /* Adjust paragraph size */
+        }
+    }
+
+    @media (max-width: 480px) {
+        h2 {
+            font-size: 1.5rem; /* Further adjust title size for very small screens */
+        }
+
+        p {
+            font-size: 0.9rem; /* Further adjust paragraph size */
+        }
+    }
+
+    .unique-featured-products {
+        text-align: center; /* Center text */
+        padding: 40px 20px; /* Add padding */
+    }
+
+    .unique-section-title {
+        font-size: 2rem; /* Title size */
+        margin-bottom: 10px; /* Space below title */
+    }
+
+    .unique-sub-title {
+        font-size: 2.5rem; /* Subtitle size */
+        color: #6a8e4d;
+        margin-bottom: 20px; /* Space below subtitle */
+    }
+
+    .unique-section-paragraph {
+        font-size: 1.2rem; /* Paragraph size */
+        margin-bottom: 30px; /* Space below paragraph */
+    }
+
+    .unique-product-grid {
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center the grid */
+        gap: 5%;/* Space between boxes */
+    }
+
+    .unique-product-box {
+        overflow: hidden; /* Hide overflow */
+        text-align: center; /* Center text */
+        width: 80vh;
+        height: 50vh; /* Set height */
+        border: 2px solid transparent; /* Set a solid border with transparent color */
+        border-radius: 10%; /* Apply border radius */
+        border-color: green;
+    }
+
+
+
+    .unique-product-image {
+        width: 100%; /* Full width for image */
+        height: 80%; /* Maintain aspect ratio */
+        object-fit: cover;
+
+    }
+
+    @media (max-width: 768px) {
+        .unique-product-grid {
+            flex-direction: column; /* Stack boxes on smaller screens */
+            align-items: center; /* Center items */
+            width: 80%; /* Set a smaller width for the grid */
+            height: auto; /* Use auto for height */
+            margin: 20px auto; /* Center the grid with margin */
+        }
+
+        .unique-product-box {
+            width: 100%; /* Make each box take full width of the grid */
+            max-width: 500px; /* Set a maximum width for the boxes */
+            margin-top: 20px; /* Add margin-top for spacing */
+        }
+
+        .unique-product-box:nth-child(2) {
+            margin-top: 40px; /* Additional margin for the second box */
+        }
+    }
+
+    .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 20px; /* Space between the panels */
+        align-items: center; /* Center items vertically */
+        padding: 20px; /* Add padding around the grid */
+    }
+
+    .video-panel {
+        display: flex;
+        justify-content: center; /* Center the video */
+        align-items: center; /* Center the video vertically */
+        width: 100%; /* Ensure the panel takes full width */
+    }
+
+    .video-container {
+        width: 100%; /* Full width for the container */
+        max-width: 800px; /* Set a maximum width for the video */
+        height: 100%; /* Ensure the container takes full height */
+        aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
+        overflow: hidden; /* Hide overflow */
+    }
+
+    .video-container video {
+        width: 100%; /* Make video responsive */
+        height: 100%; /* Fill the container */
+        object-fit: cover; /* Cover the area while maintaining aspect ratio */
+    }
+
+    .info-panel {
+        text-align: left; /* Align text to the left */
+    }
+
+    .info-panel h2 {
+        margin-bottom: 10px; /* Space below the title */
+    }
+
+    .info-panel ul {
+        list-style: none; /* Remove default list styling */
+        padding: 0; /* Remove padding */
+    }
+
+    .info-panel li {
+        margin-bottom: 10px; /* Space between list items */
+        display: flex; /* Use flexbox for alignment */
+        align-items: center; /* Center items vertically */
+    }
+
+    .info-panel img {
+        margin-right: 10px; /* Space between image and text */
+        width: 100px; /* Set a width for the checkmark image */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    @media (max-width: 768px) {
+        .info-grid {
+            grid-template-columns: 1fr; /* Stack panels on smaller screens */
+        }
+
+        .info-panel h2 {
+            text-align: center; /* Center the headline on smaller screens */
+        }
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 20px; /* Space between grid items */
+        padding: 20px; /* Padding around the grid */
+    }
+
+    .grid-item {
+        display: flex;
+        justify-content: center; /* Center the image */
+        align-items: center; /* Center the image vertically */
+        /* border: 2px solid green; Optional: border around each item */
+        border-radius: 10%; /* Optional: rounded corners */
+        overflow: hidden; /* Hide overflow */
+    }
+
+    .grid-item img {
+        width: 80%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .learn-more img {
+    max-width: 20%; /* Ensure the image is responsive */
+    height: 20%; /* Maintain aspect ratio */
+    display: block; /* Ensure it behaves like a block element */
+    margin: 0 auto; /* Center the image */
+}
+
+    @media (max-width: 768px) {
+        .product-grid {
+            grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+        }
+
+        .learn-more img {
+            max-width: 50%;
+        }
+    }
+
+
+    @media (max-width: 480px) {
+        .product-grid {
+            grid-template-columns: 1fr; /* 1 column on very small screens */
+        }
+
+    
+    }
+
+    .core-value-img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+        flex: 1;
+        min-width: 250px;
+        max-width: 350px;
+        padding: 20px;
+    }
+
+    .core-value-img:hover {
+        transform: scale(1.1);
+    }
+
+    /* Add responsive styling for smaller screens */
+    @media (max-width: 768px) {
+        .core-value-img img {
+            width: 150px !important; /* Override inline style for mobile */
+        }
+        .core-value-img {
+            min-width: 200px;
+            margin: 10px !important;
+        }
+    }
+
+    .section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+    </style>
+</head>
+<body>
+    <div class="Head">
+        <ul class="flex-list">
+            <img src="./images/icons-١٩.png" alt="Email icon" class="icon">
+            <li>info@agrovia.net - sales@agrovia.net</li>
+            <img src="./images/icons-٢٠.png" alt="Email icon" class="icon">
+            <li>+20 10 0515305</li>
+        </ul>
+    </div>
+    <header class="header">
+        <div class="logo">
+            <img src="./images/logo-0١.png" alt="agrovia logo" class="main-logo">
+        </div>
+        <nav class="nav">
+            <ul class="flex-list nav-list">
+                <li><a href="index.html" style="text-decoration: none; color: inherit;">Home</a></li>
+        <li><a href="aboutus.html" style="text-decoration: none; color: inherit;">About Us</a></li>
+        <li class="nav-item dropdown" style="display: flex; align-items: center;">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none; color: inherit; font-size: 1.5rem; padding: 0; margin: 0;">
+                Our Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size: 1.5rem;">
+                <li><a class="dropdown-item" href="fresh-fruits.html" style="text-decoration: none; color: inherit;">Fresh Fruits</a></li>
+                <li><a class="dropdown-item" href="frozen-fruits.html" style="text-decoration: none; color: inherit;">Frozen Fruits</a></li>
+                <li><a class="dropdown-item" href="frozen-vegetables.html" style="text-decoration: none; color: inherit;">Frozen Vegetables</a></li>
+            </ul>
+        </li>
+        <li><a href="gallery.html" style="text-decoration: none; color: inherit;">Gallery</a></li>
+        <li><a href="contactus.html" style="text-decoration: none; color: inherit;">Contact Us</a></li>
+            </ul>
+        </nav>
+<!-- Bootstrap menu style -->
+
+<style>
+    /* Ensure the dropdown toggle matches its peers */
+.nav-item.dropdown {
+display: flex;
+align-items: center;
+}
+
+.nav-link.dropdown-toggle {
+text-decoration: none !important;
+color: inherit !important;
+font-size: 1.5rem !important;
+padding: 0 !important; /* Remove Bootstrap's default padding */
+margin: 0 !important; /* Remove Bootstrap's default margin */
+}
+
+/* Ensure the dropdown menu matches the styling */
+.dropdown-menu {
+font-size: 1.5rem !important;
+}
+
+.dropdown-item {
+text-decoration: none !important;
+color: inherit !important;
+}
+</style>
+
+<style>
+        @media (max-width: 768px) {
+            .logo {
+                margin: 0 auto;
+            }
+        }
+</style>
+
+    </header>
+    
+    <section class="image-with-caption">
+        <div class="image-container">
+            <img src="./images/upscaled shit/upscayl_png_realesrgan-x4plus_4x/Car4.png" alt="strawberries">
+            <div class="caption">
+                <h1 style="font-weight: bolder; font-size: 4rem !important;">Privacy Policy</h1>
+            </div>
+        </div>
+    </section>
+
+<style>
+    /* Container for the image and caption */
+.image-with-caption {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Ensure the image doesn't overflow */
+}
+
+/* Image container */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto; /* Adjust height automatically */
+}
+
+/* Image styling */
+.image-container img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below the image */
+}
+
+/* Caption container */
+.caption {
+    position: absolute;
+    top: 50%; /* Move to the vertical center */
+    left: 50%; /* Move to the horizontal center */
+    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+    text-align: center; /* Center text */
+    color: white; /* Text color */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+    width: 90%; /* Limit width for better readability */
+    max-width: 800px; /* Maximum width for larger screens */
+}
+
+/* Caption heading */
+.caption h1 {
+    font-size: 2.5rem; /* Large font size for heading */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+/* Caption paragraph */
+.caption p {
+    font-size: 1.2rem; /* Medium font size for paragraph */
+    margin: 0; /* Remove default margin */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .caption h1 {
+        font-size: 2rem; /* Smaller font size for smaller screens */
+    }
+
+    .caption p {
+        font-size: 1rem; /* Smaller font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .caption h1 {
+        font-size: 1.5rem; /* Even smaller font size for very small screens */
+    }
+
+    .caption p {
+        font-size: 0.9rem; /* Even smaller font size for very small screens */
+    }
+}
+</style>
+
+<section class="Aboutusmain">
+    <h3>The Information We Collect</h3>
+    <p>We collect personal identification information from users in a variety of ways, including, but not limited to, when users visit our site and subscribe to our newsletter, send feedback, or post comments.</p>
+    <p>We collect non-personal identification information about users whenever they interact with the site for analytics purposes. Non-personal identification information may include the type of browser used to access the site, the type of computer or device, and other technical information used as the means of connection, such as operating system. This type of information cannot be used to identify individual visitors.</p>
+    
+    <h3>Web Browser Cookies</h3>
+    <p>The site may use "cookies," (small information files) to enhance user experience. A web browser stores cookies on a user's hard drive for record-keeping purposes; e.g., cookies help a website determine if a user is a returning or first-time visitor. A user may choose to set their web browser to refuse cookies, or to send alerts if cookies are being sent.</p>
+
+    <h3>How We Use Your Information</h3>
+    <p>The information we collect shall be used primarily for the following purposes:</p>
+    <p>To improve the website: Information such as pages most frequently visited, and technology used to access the website, may help the site handlers determine which aspect of site development or content creation to prioritize. Feedback from user emails may also be used for such purposes.</p>
+    <p>To send periodic emails: We may use the email address provided by a user to respond to inquiries, questions, and/or other requests. If a user decides to opt in to our mailing list, he or she will be sent emails that may include news, updates, or other information. When addressing inquiries or concerns sent to us through email, our citizens engagement officers may endorse a user's message, along with his or her information to other government agencies. Should you wish to exempt your information from this practice, please indicate as much in your correspondence.</p>
+    
+    <p>If you have any questions about the privacy policy, please contact us through the "Contact Us" page.</p>
+    
+    <p>Thank you for your trust in us!</p>
+</section>
+
+        
+        <style>
+            .Aboutusmain {
+                display: block;
+                padding: 50px 50px;
+                
+            }
+    
+            .Aboutusmain h1 {
+                color: #6a8e4d;
+            }
+    
+            .Aboutusmain h3 {
+                color: #6a8e4d;
+            }
+    
+            .Aboutusmain h2 {
+                color: #2D473f;
+            }
+        </style>
+
+
+<style>
+    /* General Styles */
+
+    .logoabout {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .mission-row,
+    .vision-row,
+    .values-row {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      padding: 20px 20px;
+      margin: 0 auto;
+    }
+
+    .mission-logo,
+    .vision-logo,
+    .values-logo {
+      width: 100px; /* Fixed width for the logo */
+      height: 100px; /* Fixed height for the logo */
+      margin-right: 20px;
+      flex-shrink: 0; /* Prevents the logo from shrinking or growing */
+    }
+
+    .mission-content,
+    .vision-content,
+    .values-content {
+      flex: 1; /* Allows the content to grow and take up remaining space */
+    }
+
+    .mission-content h1,
+    .vision-content h1,
+    .values-content h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #2D473f;
+    }
+
+    .mission-content p,
+    .vision-content p,
+    .values-content p {
+      margin: 5px 0 0 0;
+      font-size: 16px;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+  .mission-row,
+  .vision-row,
+  .values-row {
+    flex-direction: column; /* Stacks logo and content vertically */
+    align-items: center; /* Centers items horizontally */
+  }
+
+  .mission-logo,
+  .vision-logo,
+  .values-logo {
+    margin-right: 0; /* Removes the right margin */
+    margin-bottom: 20px; /* Adds space between logo and content */
+  }
+}
+    
+  </style>
+
+ 
+
+     <section class="beforeendgrid">
+        <div style="display: grid; grid-template-columns: repeat(4, 20%); margin: 0 auto; justify-content: center; text-align: center; gap: 10px; padding: 20px; border-top: 1px solid black;" class="beforeendcontainer">
+            <img src="./images/logo-0١.png" alt="main logo">
+            <ul class="endicon">
+                <li style="font-size: 2rem; color: #2D473f; font-weight: bold;">Menu</li>
+                <li><a href="index.html" style="text-decoration: none; color: inherit; font-size: 1.5rem;">Home</a></li>
+                <li><a href="aboutus.html" style="text-decoration: none; color: inherit; font-size: 1.5rem;">About Us</a></li>
+                <li class="nav-item dropdown" style="display: flex; align-items: center;">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownFooter" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none; color: inherit; font-size: 1.5rem; padding: 0; margin: 0;">
+                        Our Products
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownFooter" style="font-size: 1.5rem;">
+                        <li><a class="dropdown-item" href="fresh-fruits.html" style="text-decoration: none; color: inherit;">Fresh Fruits</a></li>
+                        <li><a class="dropdown-item" href="frozen-fruits.html" style="text-decoration: none; color: inherit;">Frozen Fruits</a></li>
+                        <li><a class="dropdown-item" href="frozen-vegetables.html" style="text-decoration: none; color: inherit;">Frozen Vegetables</a></li>
+                    </ul>
+                </li>                <li><a href="gallery.html" style="text-decoration: none; color: inherit; font-size: 1.5rem;">Gallery</a></li>
+                <li><a href="contactus.html" style="text-decoration: none; color: inherit; font-size: 1.5rem;">Contact Us</a></li>
+            </ul>
+            <style>
+
+/* Base styles for the image-with-caption section */
+.image-with-caption {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Ensure the image doesn't overflow */
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Full height of the parent */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%; /* Full height of the container */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    display: block; /* Remove extra space below the image */
+}
+
+.caption {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+    text-align: center; /* Center text */
+    color: white; /* Text color */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+    width: 90%; /* Limit width for better readability */
+    max-width: 800px; /* Maximum width for larger screens */
+}
+
+.caption h1 {
+    font-size: 8rem; /* Large font size for heading */
+    font-weight: bolder; /* Bold font weight */
+    margin: 0; /* Remove default margin */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .caption h1 {
+        font-size: 6rem; /* Slightly smaller font size for large tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .image-with-caption {
+        height: 50vh; /* Reduce height for smaller screens */
+    }
+
+    .caption h1 {
+        font-size: 4rem; /* Smaller font size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .caption h1 {
+        font-size: 2.5rem; /* Even smaller font size for mobile devices */
+    }
+}
+
+                /* Hover effect for links */
+.endicon li a:hover {
+    color: #2D473f; /* Darker color on hover */
+    font-weight: bold; /* Bold on hover */
+}
+
+/* Active page styling */
+.endicon li a[href="index.html"].active,
+.endicon li a[href="aboutus.html"].active,
+.endicon li a[href="ourproducts.html"].active,
+.endicon li a[href="gallery.html"].active,
+.endicon li a[href="contactus.html"].active {
+    color: #2D473f; /* Darker color for active page */
+    font-weight: bold; /* Bold for active page */
+}
+            </style>
+            <ul class="endicon">
+                <li style="font-size: 2rem; color: #2D473f; font-weight: bold;">Help</li>
+                <li style="font-size: 1.5rem; color: #2D473f;">
+    <a href="privacypolicy.html" style="color: #2D473f; text-decoration: none;">Privacy Policy</a>
+</li>
+            </ul>
+            <ul class="endicon">
+                <li style="font-size: 2rem; color: #2D473f; font-weight: bold;">Have Questions?</li>
+                <li style="font-size: 1.5rem; color: #2D473f;" ><img src="./images/Endicons (3).png" alt="Endicon"> التجمع الخامس - القاهرة الجديدة</li>
+                <li style="font-size: 1.5rem; color: #2D473f;" ><img src="./images/Endicons (1).png" alt="Endicon"> +20 10 05153059</li>
+                <li style="font-size: 1.5rem; color: #2D473f;" ><img src="./images/Endicons (2).png" alt="Endicon"> info@agrovia.net</li>
+                <li style="font-size: 1.5rem; color: #2D473f;" ><img src="./images/Endicons (2).png" alt="Endicon"> Sales@agrovia.net</li>
+            </ul>     
+            <a href="https://wa.me/+201005153059" class="whatsapp-button" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+              </a>
+              <button style="font-size: larger;" id="back-to-top" class="back-to-top-button">
+                <img src="./arrowup.png" alt="Arrow Up">
+              </button>
+        </div>
+        <style>
+            .beforeendcontainer {
+                margin: 0 auto;
+            }
+        
+        /* WhatsApp Button */
+            .whatsapp-button {
+              position: fixed;
+              bottom: 100px;
+              left: 10px;
+              background-color: #25d366; /* WhatsApp green */
+              color: white;
+              padding: 10px;
+              border-radius: 50%; /* Makes it a circle */
+              text-decoration: none;
+              font-size: 16px;
+              font-weight: bold;
+              display: flex;
+              align-items: center;
+              justify-content: center; /* Center the icon */
+              width: 50px; /* Same size as Back to Top button */
+              height: 50px; /* Same size as Back to Top button */
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+              transition: background-color 0.3s ease, transform 0.3s ease;
+              display: none; /* Hidden by default */
+            }
+            
+            .whatsapp-button:hover {
+              background-color: #128c7e; /* Darker green on hover */
+              transform: scale(1.1); /* Slightly enlarge on hover */
+            }
+            
+            .whatsapp-button img {
+              width: 24px;
+              height: 24px;
+            }
+            
+            /* Back to Top Button */
+            .back-to-top-button {
+              position: fixed;
+              bottom: 100px; /* Positioned above the WhatsApp button */
+              right: 10px;
+              font-size: 48px;
+              background-color: #25d366; /* WhatsApp green */
+              color: white;
+              border: none;
+              width: 50px; /* Same size as WhatsApp button */
+              height: 50px; /* Same size as WhatsApp button */
+              border-radius: 50%; /* Makes it a circle */
+              font-size: 24px;
+              cursor: pointer;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+              transition: background-color 0.3s ease, transform 0.3s ease;
+              display: none; /* Hidden by default */
+            }
+            
+            .back-to-top-button:hover {
+              background-color: #128c7e; /* Darker green on hover */
+              transform: scale(1.1); /* Slightly enlarge on hover */
+            }
+            
+            
+/* WhatsApp Button */
+.whatsapp-button {
+  width: 70px; /* Increased size */
+  height: 70px; /* Increased size */
+}
+
+.whatsapp-button img {
+  width: 36px; /* Increased icon size */
+  height: 36px; /* Increased icon size */
+}
+
+/* Back to Top Button */
+.back-to-top-button {
+  width: 70px; /* Increased size */
+  height: 70px; /* Increased size */
+  font-size: 48px; /* Increased arrow size */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+              .back-to-top-button {
+                bottom: 100px !important; /* Adjusted for smaller screens */
+              }
+            }
+
+              .endicon {
+        text-align: left; /* Align text to the left */
+    }
+
+    .endicon h2 {
+        margin-bottom: 10px; /* Space below the title */
+    }
+
+    .endicon ul {
+        list-style: none; /* Remove default list styling */
+        padding: 0; /* Remove padding */
+    }
+
+    .endicon li {
+        margin-bottom: 10px; /* Space between list items */
+        display: flex; /* Use flexbox for alignment */
+        align-items: center; /* Center items vertically */
+    }
+
+    .endicon img {
+        margin-right: 10px; /* Space between image and text */
+        width: 20px; /* Set a width for the checkmark image */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+        </style>
+        <style>
+            @media (max-width: 992px) {
+                .beforeendcontainer {
+                    grid-template-columns: repeat(2, 40%) !important;
+                }
+            }
+            @media (max-width: 768px) {
+                .beforeendcontainer {
+                    grid-template-columns: 80% !important;
+                }
+                .beforeendgridbox {
+                    font-size: 1.8rem !important;
+                }
+            }
+
+                        @media (max-width: 768px) {
+                .endicon {
+                    text-align: center !important;
+                    justify-content: center !important;
+                }
+            
+                .endicon li {
+                    justify-content: center !important;
+                    margin: 15px 0;
+                }
+            
+                .endicon img {
+                    margin: 0 10px;
+                }
+            }
+          
+        </style>
+ </section>
+ <div class="Head">
+    <ul class="flex-list">
+        <li>© 2025 Agrovia Crops Company. All rights reserved.</li>
+        <p>
+            <a href="https://www.linkedin.com/company/agroviafor-agricultural-services/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin linkedin-icon"></i>
+            </a>
+        </p>
+    </ul>
+</div>
+        
+<style>
+    .linkedin-icon {
+    font-size: 24px; /* Adjust size as needed */
+    color: #2D473f;
+}
+</style>
+</style>
+</body>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</html>
