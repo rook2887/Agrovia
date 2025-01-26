@@ -492,7 +492,7 @@ color: inherit !important;
         <div class="image-container">
             <img src="./images/gallerymerged/cover gallery-١٦٥.png" alt="strawberries">
             <div class="caption">
-                <h1 style="font-weight: bolder; font-size: 4rem !important;">Fresh Fruits</h1>
+                <h1 style="font-weight: bolder; font-size: 4rem !important;">Gallery</h1>
             </div>
         </div>
     </section>
@@ -568,15 +568,30 @@ color: inherit !important;
 
 
 <div class="container">
-    
     <div class="row mt-2">
         <div class="col-12 col-md-3 mb-3">
             <input type="text" class="form-control" placeholder="Search cards" aria-label="Search cards"
                 onkeyup="searchFilter()">
-
+        </div>
+        <div class="col-12 col-md-3 mb-3">
+            <select class="form-select" aria-label="Category filter" onchange="categoryFilter(this.value)">
+                <option value="">All Categories</option>
+                <option value="artichoke">Artichoke</option>
+                <option value="beans">Beans</option>
+                <option value="broccoli">Broccoli</option>
+                <option value="carrots">Carrots</option>
+                <option value="cauliflower">Cauliflower</option>
+                <option value="guava">Guava</option>
+                <option value="lemon">Lemon</option>
+                <option value="mango">Mango</option>
+                <option value="okra">Okra</option>
+                <option value="onion">Onion</option>
+                <option value="orange">Orange</option>
+            </select>
         </div>
     </div>
-
+    
+    <div class="row" id="card-container">
     <div style="margin-bottom: 20px;" class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
             <div class="card h-100">
@@ -1035,29 +1050,61 @@ color: inherit !important;
                     style="width:100%; height:15vw; object-fit:cover;" alt="...">
             </div>
         </div>
-                
+
         
     </div>
     
 
-
+    <style>
+        @media (max-width: 768px) {
+            .card-img-top {
+                height: 40vh !important; /* Adjust height for smaller screens */
+            }
+        }
+    
+        @media (min-width: 769px) {
+            .card-img-top {
+                height: 15vw !important; /* Default height for larger screens */
+            }
+        }
+    </style>
 
 <!-- this is javascript-->
+
+
 <script>
     
-    var searchFilter = () => {
+    let currentSearch = '';
+let currentCategory = '';
+
+const searchFilter = () => {
     const input = document.querySelector(".form-control");
-    const cards = document.getElementsByClassName("col");
-    let filter = input.value.toLowerCase();
+    currentSearch = input.value.toLowerCase();
+    applyFilters();
+};
+
+const categoryFilter = (category) => {
+    currentCategory = category.toLowerCase();
+    applyFilters();
+};
+
+const applyFilters = () => {
+    const cards = document.querySelectorAll("#card-container .col");
     
-    for (let i = 0; i < cards.length; i++) {
-        let img = cards[i].querySelector("img"); // Get the <img> tag
-        if (img.src.toLowerCase().includes(filter)) {
-            cards[i].classList.remove("d-none");
+    cards.forEach(card => {
+        const img = card.querySelector("img");
+        const imgSrc = img.src.toLowerCase();
+        const imgAlt = img.alt.toLowerCase();
+        
+        const matchesSearch = currentSearch === '' || imgAlt.includes(currentSearch);
+        const matchesCategory = currentCategory === '' || imgSrc.includes(currentCategory);
+        
+        if (matchesSearch && matchesCategory) {
+            card.style.display = 'block'; // Show the card
         } else {
-            cards[i].classList.add("d-none");
+            card.style.display = 'none'; // Hide the card
         }
-    }
+    });
 };
 
 
