@@ -422,14 +422,21 @@ width: 100%;}
     </style>
 </head>
 <body>
-    <div class="Head">
-        <ul class="flex-list">
+     <div class="Head">
+        <ul class="flex-list flexlistverytop">
             <img src="./images/icons-١٩.png" alt="Email icon" class="icon">
             <li>info@agrovia.net / sales@agrovia.net</li>
             <img src="./images/icons-٢٠.png" alt="Email icon" class="icon">
             <li>+20 10 0515305</li>
         </ul>
     </div>
+
+<style>
+    @media (max-width: 768px) {
+        .flexlistverytop {
+        transform: translateX(10px); /* Move the entire list 20px to the right */}
+    }
+</style>
 
 <style>
     @media (max-width: 768px) {
