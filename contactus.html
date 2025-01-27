@@ -479,7 +479,18 @@ text-decoration: none !important;
 color: inherit !important;
 }
 </style>
+<style>
+    .logo {
+        margin-left: 50px; /* Add left margin for large screens */
+    }
 
+    @media (max-width: 768px) {
+        .logo {
+            margin: 0 auto;
+            margin-left: 0; /* Reset margin for mobile */
+        }
+    }
+</style>
 <style>
         @media (max-width: 768px) {
             .logo {

@@ -444,6 +444,19 @@ width: 100%;}
 
         <style>
             /* Ensure the dropdown toggle matches its peers */
+
+            .logo {
+        margin-left: 50px; /* Add left margin for large screens */
+    }
+
+    /* Keep existing mobile styles */
+    @media (max-width: 768px) {
+        .logo {
+            margin: 0 auto;
+            margin-left: 0; /* Reset margin for mobile */
+        }
+    }
+
 .nav-item.dropdown {
     display: flex;
     align-items: center;
@@ -469,11 +482,16 @@ width: 100%;}
         </style>
 
 <style>
-        @media (max-width: 768px) {
-            .logo {
-                margin: 0 auto;
-            }
+    .logo {
+        margin-left: 50px; /* Add left margin for large screens */
+    }
+
+    @media (max-width: 768px) {
+        .logo {
+            margin: 0 auto;
+            margin-left: 0; /* Reset margin for mobile */
         }
+    }
 </style>
 
     </header>
