@@ -334,6 +334,31 @@ width: 100%;}
         .info-panel h2 {
             text-align: center; /* Center the headline on smaller screens */
         }
+
+       /* Add these new styles */
+       .video-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; /* Optional: ensures the panel fills the parent container */
+}
+
+.video-container {
+    width: 100%; /* Ensures the container spans the full width */
+    margin: 0 auto; /* Centers the container horizontally */
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    padding-left: 0px;
+    aspect-ratio: 16 / 9; /* Maintains the correct aspect ratio */
+    display: block; /* Ensures no extra inline spacing around the video */
+}
+
+
     }
 
     .product-grid {
