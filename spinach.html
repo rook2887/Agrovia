@@ -979,6 +979,36 @@ color: inherit !important;
                 }
             }
           
+            @media (max-width: 768px) {
+    .endicon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%; /* Ensure the container takes full width */
+        padding-left: 0; /* Remove any left padding */
+        margin-left: 0; /* Remove any left margin */
+        box-sizing: border-box; /* Include padding and border in the width */
+    }
+
+    .endicon ul {
+        width: 100%; /* Ensure the unordered list takes full width */
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    .endicon li {
+        width: 100%; /* Ensure each list item takes full width */
+        text-align: center; /* Center the text */
+        padding: 10px; /* Adjust padding as needed */
+        margin-left: 0; /* Remove any left margin */
+        box-sizing: border-box; /* Include padding and border in the width */
+    }
+}
+
+
+
         </style>
  </section>
  <div class="Head">
