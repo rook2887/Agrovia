@@ -582,6 +582,102 @@ width: 100%;}
     </div>
     <!-- End of statistics section -->
 
+    <style>
+        .stats-section {
+    background-image: url('./images/Backgroundicons.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.flex-row-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.flex-item {
+    text-align: center;
+    margin: 10px;
+}
+
+.flex-item img {
+    width: 100px;
+    height: auto;
+}
+
+.flex-item h2 {
+    margin: 10px 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.flex-item p {
+    font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .flex-row-list {
+        flex-wrap: wrap; /* Enable wrapping */
+        justify-content: center; /* Center-align items in rows */
+    }
+
+    .flex-item {
+        flex: 1 1 calc(50% - 20px); /* Two items per row */
+        max-width: 300px; /* Ensure items don't grow too large */
+        display: flex; /* Use flexbox for inner alignment */
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center-align content horizontally */
+        text-align: center; /* Center-align text */
+    }
+
+    .flex-item img {
+        width: 80px; /* Slightly smaller icons */
+        margin-bottom: 10px; /* Add spacing below the icon */
+    }
+
+    .flex-item h2 {
+        font-size: 1.75rem; /* Adjust font size */
+        margin: 10px 0; /* Maintain spacing */
+    }
+
+    .flex-item p {
+        font-size: 0.95rem; /* Adjust text size */
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .flex-row-list {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .flex-item {
+        flex: 1 1 100%; /* Full width for each item */
+    }
+
+    .flex-item img {
+        width: 60px; /* Smaller icons for mobile */
+    }
+
+    .flex-item h2 {
+        font-size: 1.5rem;
+    }
+
+    .flex-item p {
+        font-size: 0.9rem;
+    }
+}
+
+    </style>
+
     <section class="about-us-section section2">
         <div class="about-us-content">
             <h2 style="font-weight: bold;">About Us</h2>
