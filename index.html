@@ -352,21 +352,33 @@ width: 100%;}
         overflow: hidden; /* Hide overflow */
     }
 
+    /* Add this new style for the last grid item */
+    .grid-item:last-child {
+        grid-column: 2; /* Position in the middle column */
+        grid-row: 2; /* Position in the second row */
+    }
+
     .grid-item img {
         width: 80%; /* Make image responsive */
         height: auto; /* Maintain aspect ratio */
     }
 
     .learn-more img {
-    max-width: 20%; /* Ensure the image is responsive */
-    height: 20%; /* Maintain aspect ratio */
-    display: block; /* Ensure it behaves like a block element */
-    margin: 0 auto; /* Center the image */
-}
+        max-width: 20%; /* Ensure the image is responsive */
+        height: 20%; /* Maintain aspect ratio */
+        display: block; /* Ensure it behaves like a block element */
+        margin: 0 auto; /* Center the image */
+    }
 
     @media (max-width: 768px) {
         .product-grid {
             grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+        }
+
+        /* Reset the positioning for mobile view */
+        .grid-item:last-child {
+            grid-column: auto;
+            grid-row: auto;
         }
 
         .learn-more img {
@@ -374,13 +386,10 @@ width: 100%;}
         }
     }
 
-
     @media (max-width: 480px) {
         .product-grid {
             grid-template-columns: 1fr; /* 1 column on very small screens */
         }
-
-    
     }
 
     .core-value-img {
@@ -731,7 +740,7 @@ width: 100%;}
 </style>
 <section>
     <h3 style="text-align: center; color: #2D473f; font-style: italic;" class="unique-section-title">Product on fire</h3>
-    <p style="text-align: center;" class="unique-section-paragraph">Whether you're looking to enhance your product line or satisfy customer cravings, our premium strawberries are the ideal choice. Let's elevate your offerings with the best of Egypt!</p>
+    <p style="text-align: center; width: 80%; margin: 0 auto;" class="unique-section-paragraph">Whether you're looking to enhance your product line or satisfy customer cravings, our premium strawberries are the ideal choice. Let's elevate your offerings with the best of Egypt!</p>
 </section>
 <section class="info-grid">
     <div class="video-panel">
@@ -778,7 +787,7 @@ width: 100%;}
 </a>
 </section>
 <section>
-    <h3 style="text-align: center; color:#6a8e4d; font-style: italic;" class="unique-section-title">Our core values</h3>
+    <h3 style="text-align: center; color:#6a8e4d; font-style: italic; margin-bottom: 30px;" class="unique-section-title">Our core values</h3>
     <p style="text-align: center;" class="unique-section-paragraph">We grow our business according to three key pillars: trust, quality and supply</p>
 </section>
 <section>
