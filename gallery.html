@@ -351,8 +351,11 @@ width: 100%;}
         /* border: 2px solid green; Optional: border around each item */
         border-radius: 10%; /* Optional: rounded corners */
         overflow: hidden; /* Hide overflow */
+        
     }
 
+
+    
     .grid-item img {
         width: 80%; /* Make image responsive */
         height: auto; /* Maintain aspect ratio */
@@ -364,6 +367,9 @@ width: 100%;}
     display: block; /* Ensure it behaves like a block element */
     margin: 0 auto; /* Center the image */
 }
+
+
+
 
     @media (max-width: 768px) {
         .product-grid {
@@ -1117,7 +1123,13 @@ color: inherit !important;
 
         .card {
             border: 2px solid green;
+            width: 75%; /* Adjust the width to shrink the card */
+  max-width: 300px; /* Optional: set a maximum width */
+  height: auto; /* Maintain aspect ratio, or set a specific height */
+  margin: 0 auto;
         }
+
+        
 
         @media (max-width: 768px) {
             .card-img-top {
