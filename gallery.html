@@ -1416,12 +1416,23 @@ color: inherit !important;
 }
 
         
-        @media (max-width: 768px) {
-            .card-img-top {
-                height: 40vh !important; /* Adjust height for smaller screens */
-            }
-        }
-    
+@media (max-width: 768px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center horizontally */
+        justify-content: center; /* Center vertically if needed */
+        margin: 0 auto; /* Ensure it's centered within its parent */
+    }
+
+    .card-img-top {
+        width: auto; /* Adjust width dynamically */
+        max-width: 100%; /* Prevent overflow */
+        display: block; /* Fix inline spacing issue */
+        margin: 0 auto; /* Center horizontally */
+    }
+}
+
        
     </style>
 
